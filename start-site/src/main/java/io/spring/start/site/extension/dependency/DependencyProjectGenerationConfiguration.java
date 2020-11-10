@@ -24,6 +24,7 @@ import io.spring.initializr.generator.project.ProjectDescription;
 import io.spring.initializr.generator.project.ProjectGenerationConfiguration;
 import io.spring.initializr.generator.spring.build.gradle.ConditionalOnGradleVersion;
 import io.spring.initializr.metadata.InitializrMetadata;
+import io.spring.start.site.extension.contributor.IMGArenaTxtContributor;
 import io.spring.start.site.extension.dependency.flyway.FlywayProjectContributor;
 import io.spring.start.site.extension.dependency.liquibase.LiquibaseProjectContributor;
 import io.spring.start.site.extension.dependency.lombok.LombokGradleBuildCustomizer;
@@ -116,6 +117,11 @@ public class DependencyProjectGenerationConfiguration {
 	@ConditionalOnRequestedDependency("liquibase")
 	public LiquibaseProjectContributor liquibaseProjectContributor() {
 		return new LiquibaseProjectContributor();
+	}
+
+	@Bean
+	public IMGArenaTxtContributor imgArenaTxtContributor() {
+		return new IMGArenaTxtContributor();
 	}
 
 }

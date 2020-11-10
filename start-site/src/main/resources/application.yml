@@ -23,6 +23,16 @@ spring:
       thread-name-prefix: initializr-
 
 initializr:
+  group-id:
+    value: com.imgarena
+  artifact-id:
+    value: microservice
+  name:
+    value: microservice
+  description:
+    value: A new IMGArena microservice
+  version:
+    value: 1.0.0
   env:
     boms:
       azure:
@@ -1472,11 +1482,8 @@ initializr:
       default: false
   javaVersions:
     - id: 15
-      default: false
-    - id: 11
       default: true
-    - id: 1.8
-      name: 8
+    - id: 11
       default: false
   languages:
     - name: Java
@@ -1484,9 +1491,6 @@ initializr:
       default: true
     - name: Kotlin
       id: kotlin
-      default: false
-    - name: Groovy
-      id: groovy
       default: false
   bootVersions:
     - name : Latest SNAPSHOT
