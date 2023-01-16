@@ -41,7 +41,7 @@ jobs:
         languages: ${{ matrix.language }}
 
     - name: Build
-      run: mvnw clean install
+      run: ./mvnw clean install
 
     - name: Perform CodeQL Analysis
       uses: github/codeql-action/analyze@v2
